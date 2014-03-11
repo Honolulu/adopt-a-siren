@@ -18,3 +18,5 @@
 /tmp
 .env
 /grab_data
+/.idea
+/config/database.yml

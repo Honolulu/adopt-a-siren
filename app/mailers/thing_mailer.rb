@@ -1,7 +1,7 @@
 class ThingMailer < ActionMailer::Base
 
   def send_personalized
-    if ENV.include? 'FORCE_EMAIL' or ['2013-01-02', '2013-02-01', '2013-03-01', '2013-04-01', '2013-05-01', '2013-06-03', '2013-07-01', '2013-08-01', '2013-09-03', '2013-10-01', '2013-11-01', '2013-12-02'].include? Date.current.to_s
+    if ENV.include? 'FORCE_EMAIL' or ['2014-04-01', '2014-05-01', '2014-06-02', '2014-07-01', '2014-08-01', '2014-09-02', '2014-10-01', '2014-11-03', '2014-12-01'].include? Date.current.to_s
       things = Thing.where(:thing_type => 1).joins(:users)
       
       things.each do |t|
